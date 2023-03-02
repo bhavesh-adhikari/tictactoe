@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <style>
+        .container {
+            align-items: center;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            /* establish flex container */
+            flex-wrap: wrap;
+            /* enable flex items to wrap */
+
+        }
+
+        .cell {
+            /* flex: 0 0 30%; */
+            /* flex-basis: */
+            width: 60px;
+            /* don't grow, don't shrink, width */
+            height: 66px;
+            line-height: 65px;
+            font-family: 'Gill Sans', 'Gill Sans MT', 'Segoe UI', 'Trebuchet MS';
+            color: #3aee70;
+            border: 1.5px solid #50b5c9;
+            background-color: #232323;
+            text-align: center;
+            font-size: 60px;
+            
+        }
+        .cell:hover{
+            background-color:#121111;
+            cursor:pointer;
+            
+        }
+        .cell:active{
+            background-color: #121111;
+        }
+        /* .cell:nth-child(3n) {
+            color: #12ebe8;
+            border-right: none;
+        } */
+        #control{
+            text-align: center;
+        }
+        #reset{
+            font-size: 20px;
+            margin:auto;
+            /* transform: translate(0px,10px); */
+            /* margin-left: 44%; */
+            background-color: #232323;
+            border: none;
+            border-radius: 5px;
+            font-family: 'Segoe UI';
+            color: #e96b39;
+            cursor: pointer;
+            align-items: center;
+            font-weight:500;
+        }
+        #box1 {
+            color: #b6f245;
+        }
+    </style>
+</head>
+
+<body bgcolor="#131313">
+    <h4
+        style="margin-top: 30px;color: #12ebe8; text-align: center; font-family:'Segoe UI', 'Arial Narrow', Arial, sans-serif;">
+        TIC-TAC-TOE</h4>
+    <p id = "turn" style = "line-height: 0%; color:#3aee70; font-size:20px; font-family: 'Gill Sans', 'Gill Sans MT', 'Segoe UI', 'Trebuchet MS'; text-align: center;">Your's Turn(O)</p>
+    <span class="container">
+        <div class="cell" id="1"></div>
+        <div class="cell" id="2"></div>
+        <div class="cell" id="3"></div>
+        <div class="cell" id="4"></div>
+        <div class="cell" id="5"></div>
+        <div class="cell" id="6"></div>
+        <div class="cell" id="7"></div>
+        <div class="cell" id="8"></div>
+        <div class="cell" id="9"></div>
+    </span>
+    <form id = "control">
+        <p id="winStatus" style = "line-height: 0%; color:#b6f245; font-size:24px; font-family: 'Gill Sans', 'Gill Sans MT', 'Segoe UI', 'Trebuchet MS'"></p>
+        <button id="reset">RESET</button>
+    </form>
+    <script src="index.js"></script>
+</body>
+
+</html>
