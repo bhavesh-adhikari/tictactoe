@@ -230,6 +230,6 @@ for (var i = 0; i < 3; i += 1) {
     cell[x].innerHTML = board[i][j]
   }
 }
-
-fill_position(choice_human);
 fill_position(choice_comp);
+fill_position(choice_human);
+
