@@ -22,30 +22,7 @@ function update_board(entered, choice) {
   board[i][j] = choice;
 }
 
-
-// function fill_position(mark) {
-//   for (let x = 0; x < 9; x++) {
-//     cell[x].addEventListener('click', function (e) {
-//       if (mark === 'X') {
-//         cell[x].style.backgroundColor = "#232d38";
-//         cell[x].innerHTML = mark
-//         cell[x].style.cursor = "default";
-//         update_board(x, mark)
-//         cell[x].removeEventListener('click', arguments.callee);
-//       }
-//       if (mark === 'O') {
-//         cell[x].style.backgroundColor = "#232d38";
-//         if (cell[x].innerHTML != 'X' && cell[x].innerHTML != 'O') {
-//           cell[x].innerHTML = mark
-//           cell[x].style.cursor = "default";
-//           update_board(x, mark)
-//           cell[x].removeEventListener('click', arguments.callee);
-//         }
-//       }
-//     })
-//   }
-// }
-humanTurn = true
+humanTurn = false
 function fill_position(mark) {
   for (let x = 0; x < 9; x++) {
     cell[x].addEventListener('click', function (e) {
@@ -161,14 +138,10 @@ function display_win_status() {
   }
 }
 
-
 const reset = document.getElementById("reset");
 reset.addEventListener('click', function (e) {
   window.load()
 })
-
-
-
 
 
 
@@ -251,36 +224,12 @@ function computer() {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-// fill_position(choice_human);
-// fill_position(choice_comp);
-// cell[x].addEventListener('click', function (e) {
-//   cell[x].style.backgroundColor = "#121111";
-//   cell[x].innerHTML =
-// }
-
 for (var i = 0; i < 3; i += 1) {
   for (var j = 0; j < 3; j += 1) {
     x = 3 * i + j
     cell[x].innerHTML = board[i][j]
   }
 }
+
 fill_position(choice_human);
-
 fill_position(choice_comp);
-
-
-
-
-
