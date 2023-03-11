@@ -22,7 +22,7 @@ function update_board(entered, choice) {
   board[i][j] = choice;
 }
 
-humanTurn = false
+humanTurn = false;
 function fill_position(mark) {
   for (let x = 0; x < 9; x++) {
     cell[x].addEventListener('click', function (e) {
